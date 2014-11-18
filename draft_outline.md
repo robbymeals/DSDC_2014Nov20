@@ -1,6 +1,6 @@
 % Get Out of My Dreams and Into My Model
 % Unstructured Data Into Your Feature Set
-% Rob Mealey, Sr. Machine Learning Technologist @ NewBrand 
+% Nov 20, 2014; Rob Mealey, Sr. Machine Learning Technologist @ NewBrand 
 
 # Simplifying Assumptions
 
@@ -41,11 +41,13 @@
 
 ## There is some there there...
 
+
 # Last question: Model evaluation? 
 
 ## How do you feel about p-values?
 
-# Preprocessing Your Text
+
+# Preprocessing
 
 ## bag-of-ngrams
 
@@ -53,7 +55,8 @@
 
 ## some nifty tools
 
-# Prediction-focused Methods
+
+# Pure Prediction
 
 ## Kitchen Sink Approach
 - pro: Objective Function? What Objective Function?
@@ -64,26 +67,35 @@
 
 ## Clustering
 
-# Inference-focused Methods
+
+# Pure Analysis
 
 ## Manually generated derivative features 
 - pro: easy to explain/interpret
 - con: potentially the path to madness
 
+
+# Pure Inference
+
 ## Full Generative Model
 - pro: you wrote a dissertation without the fuss of getting a PHd
 - con: you probably don't work there anymore, as it is now fifteen years later
+
 
 # I like a nice blend...
 
 ## Feature Learning
 - Some unsupervised or semisupervised work with the text data
 
-## Using the results as features in my core mode - represented in a way that propagates the uncertainty. 
+## Feature 
+- Using the results as features in my core mode 
+- represented in a way that propagates the uncertainty. 
+
 
 # Things to watch out 
 
 ## so what do these p-values even mean now?
+
 
 # Other stuff
 
