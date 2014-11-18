@@ -26,127 +26,83 @@
     <h3 class="date">Rob Mealey, Sr. Machine Learning Technologist @ NewBrand</h3>
 </section>
 
-<section id="simplifying-assumptions" class="slide level1">
-<h1>Simplifying Assumptions</h1>
-<ol type="1">
-<li>Lets assume a classification/rank ordering task. All these techniques should work fine with a regression task.</li>
-<li>This is meant as a practical, introductory guide, for your &quot;data scientist in the trenches&quot;.
-<ul>
-<li>meaning I'm going to play it fast and loose and annoy all the phd's in the room a lot</li>
-</ul></li>
-<li>We're talking about text data here.
-<ul>
-<li>Not audio or video or whatever else...
-<ul>
-<li>though if you know some digital signals processing, you could probably adapt some of the approaches below...</li>
-</ul></li>
-</ul></li>
-</ol>
-</section>
-<section id="first-question-what-is-the-core-business-purpose-of-your-model" class="slide level1">
-<h1>First Question: What is the core business purpose of your model?</h1>
-<h2 id="what-does-your-boss-care-about">What does your boss care about?</h2>
-<ol type="1">
-<li>Pure prediction?</li>
-<li>Inference or Analysis?</li>
-</ol>
-</section>
-<section id="prediction" class="slide level1">
-<h1>Prediction</h1>
-</section>
-<section id="inference" class="slide level1">
-<h1>Inference</h1>
-</section>
-<section id="second-question-what-does-the-structured-part-of-your-dataset-look-like" class="slide level1">
-<h1>Second Question: What does the structured part of your dataset look like?</h1>
-<ol type="1">
-<li>How much of it you got?</li>
-<li>What do your strucured features look like?
-<ul>
-<li>sparse indicator/boolean values?</li>
-<li>dense continuous values</li>
-</ul></li>
-</ol>
-</section>
-<section id="sparse" class="slide level1">
-<h1>Sparse</h1>
-</section>
-<section id="dense" class="slide level1">
-<h1>Dense</h1>
-</section>
-<section id="third-question-what-does-your-unstructured-data-look-like" class="slide level1">
-<h1>Third Question: what does your unstructured data look like?</h1>
-<ol type="1">
-<li>How much of it you got?</li>
-<li>How does it link to your structured dataset?
+<section><section id="simplifying-assumptions" class="titleslide slide level1"><h1>Simplifying Assumptions</h1></section><section id="classification-task" class="slide level2">
+<h1>Classification Task</h1>
+<p>(or rank ordering task)</p>
+</section><section id="short-practical-introductory" class="slide level2">
+<h1>short, practical, introductory</h1>
+</section><section id="talking-about-text-data-here" class="slide level2">
+<h1>talking about text data here</h1>
+</section></section>
+<section><section id="what-does-your-boss-care-about" class="titleslide slide level1"><h1>1: What does your boss care about?</h1></section><section id="pure-prediction" class="slide level2">
+<h1>Pure Prediction?</h1>
+</section><section id="inference-or-analysis" class="slide level2">
+<h1>Inference or Analysis?</h1>
+</section></section>
+<section><section id="what-does-your-structured-data-look-like" class="titleslide slide level1"><h1>2: What does your structured data look like?</h1></section><section id="how-much-of-it-you-got" class="slide level2">
+<h1>How much of it you got?</h1>
+</section><section id="sparse-dense" class="slide level2">
+<h1>Sparse? Dense?</h1>
+</section></section>
+<section><section id="what-does-your-unstructured-data-look-like" class="titleslide slide level1"><h1>3: What does your unstructured data look like?</h1></section><section id="how-much-of-it-you-got-1" class="slide level2">
+<h1>How much of it you got?</h1>
+</section><section id="whats-the-link" class="slide level2">
+<h1>What's the link?</h1>
 <ul>
 <li>classifying authors?</li>
 <li>classifying object of discussion?</li>
 <li>single &quot;documents&quot; per link vs hierarchical corpus?</li>
-</ul></li>
-<li>Got labels?
+</ul>
+</section><section id="got-labels" class="slide level2">
+<h1>Got labels?</h1>
 <ul>
 <li>For all documents?</li>
 <li>For some authors for some documents?</li>
-</ul></li>
-<li>you do actually think there is some valuable information in there, right?</li>
-</ol>
-</section>
-<section id="last-question-model-evaluation-or-how-do-you-feel-about-p-values" class="slide level1">
-<h1>Last question: Model evaluation? or how do you feel about p-values?</h1>
-<ol type="1">
-<li>&quot;I need them. All of them.&quot;</li>
-<li>&quot;I don't need them.&quot;</li>
-<li>&quot;I hate them.&quot;</li>
-<li>&quot;All of the above.&quot;</li>
-</ol>
-</section>
-<section id="prediction-focused-methods" class="slide level1">
-<h1>Prediction-focused Methods</h1>
-<ul>
-<li>The Kitchen Sink Approach
+</ul>
+</section><section id="there-is-some-there-there..." class="slide level2">
+<h1>There is some there there...</h1>
+<p>You do actually think there is some valuable information in these data, right?</p>
+</section></section>
+<section><section id="last-question-model-evaluation" class="titleslide slide level1"><h1>Last question: Model evaluation?</h1></section><section id="how-do-you-feel-about-p-values" class="slide level2">
+<h1>How do you feel about p-values?</h1>
+</section></section>
+<section><section id="prediction-focused-methods" class="titleslide slide level1"><h1>Prediction-focused Methods</h1></section><section id="the-kitchen-sink-approach" class="slide level2">
+<h1>The Kitchen Sink Approach</h1>
 <ul>
 <li>pro: Objective Function? What Objective Function?</li>
 <li>con: Depending on your role, often it isn't enough to just predict well.</li>
 <li>con: People are suspicious of the black box.</li>
-</ul></li>
 </ul>
-</section>
-<section id="inference-focused-methods" class="slide level1">
-<h1>Inference-focused Methods</h1>
-<ul>
-<li>Manually generated derivative features
+</section><section id="dimensionality-reduction" class="slide level2">
+<h1>Dimensionality Reduction</h1>
+</section><section id="clustering" class="slide level2">
+<h1>Clustering</h1>
+</section></section>
+<section><section id="inference-focused-methods" class="titleslide slide level1"><h1>Inference-focused Methods</h1></section><section id="manually-generated-derivative-features" class="slide level2">
+<h1>Manually generated derivative features</h1>
 <ul>
 <li>pro: easy to explain/interpret</li>
 <li>con: potentially the path to madness</li>
-</ul></li>
-<li>Full Generative Model (now with more DAG)
+</ul>
+</section><section id="full-generative-model" class="slide level2">
+<h1>Full Generative Model</h1>
 <ul>
 <li>pro: you wrote a dissertation without the fuss of getting a PHd</li>
 <li>con: you probably don't work there anymore, as it is now fifteen years later</li>
-</ul></li>
 </ul>
-</section>
-<section id="i-like-a-nice-blend..." class="slide level1">
-<h1>I like a nice blend...</h1>
-<ol type="1">
-<li>Feature Learning
+</section></section>
+<section><section id="i-like-a-nice-blend..." class="titleslide slide level1"><h1>I like a nice blend...</h1></section><section id="feature-learning" class="slide level2">
+<h1>Feature Learning</h1>
 <ul>
 <li>Some unsupervised or semisupervised work with the text data</li>
-</ul></li>
-<li>Using the results as features in my core mode - represented in a way that propagates the uncertainty.</li>
-</ol>
-</section>
-<section id="things-to-watch-out" class="slide level1">
-<h1>Things to watch out</h1>
-<ol type="1">
-<li>so what do these p-values even mean now?</li>
-<li></li>
-</ol>
-</section>
-<section id="other-stuff" class="slide level1">
-<h1>Other stuff</h1>
-</section>
+</ul>
+</section><section id="using-the-results-as-features-in-my-core-mode---represented-in-a-way-that-propagates-the-uncertainty." class="slide level2">
+<h1>Using the results as features in my core mode - represented in a way that propagates the uncertainty.</h1>
+</section></section>
+<section><section id="things-to-watch-out" class="titleslide slide level1"><h1>Things to watch out</h1></section><section id="so-what-do-these-p-values-even-mean-now" class="slide level2">
+<h1>so what do these p-values even mean now?</h1>
+</section></section>
+<section><section id="other-stuff" class="titleslide slide level1"><h1>Other stuff</h1></section></section>
     </div>
   </div>
 
