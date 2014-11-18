@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Unstructured Data Into Your Feature Set" />
+  <title>Get Out of My Dreams and Into My Model</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="reveal.js/css/reveal.min.css"/>
+    <style type="text/css">code{white-space: pre;}</style>
+    <link rel="stylesheet" href="reveal.js/css/theme/simple.css" id="theme">
+  <link rel="stylesheet" media="print" href="reveal.js/css/print/pdf.css" />
+  <!--[if lt IE 9]>
+  <script src="reveal.js/lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section>
+    <h1 class="title">Get Out of My Dreams and Into My Model</h1>
+    <h2 class="author">Unstructured Data Into Your Feature Set</h2>
+    <h3 class="date">Rob Mealey, Sr. Machine Learning Technologist @ NewBrand</h3>
+</section>
+
+<section id="simplifying-assumptions" class="slide level1">
+<h1>Simplifying Assumptions</h1>
+<ol type="1">
+<li>Lets assume a classification/rank ordering task. All these techniques should work fine with a regression task.</li>
+<li>This is meant as a practical, introductory guide, for your &quot;data scientist in the trenches&quot;.
+<ul>
+<li>meaning I'm going to play it fast and loose and annoy all the phd's in the room a lot</li>
+</ul></li>
+<li>We're talking about text data here.
+<ul>
+<li>Not audio or video or whatever else...
+<ul>
+<li>though if you know some digital signals processing, you could probably adapt some of the approaches below...</li>
+</ul></li>
+</ul></li>
+</ol>
+</section>
+<section id="first-question-what-is-the-core-business-purpose-of-your-model" class="slide level1">
+<h1>First Question: What is the core business purpose of your model?</h1>
+<h2 id="what-does-your-boss-care-about">What does your boss care about?</h2>
+<ol type="1">
+<li>Pure prediction?</li>
+<li>Inference or Analysis?</li>
+</ol>
+</section>
+<section id="prediction" class="slide level1">
+<h1>Prediction</h1>
+</section>
+<section id="inference" class="slide level1">
+<h1>Inference</h1>
+</section>
+<section id="second-question-what-does-the-structured-part-of-your-dataset-look-like" class="slide level1">
+<h1>Second Question: What does the structured part of your dataset look like?</h1>
+<ol type="1">
+<li>How much of it you got?</li>
+<li>What do your strucured features look like?
+<ul>
+<li>sparse indicator/boolean values?</li>
+<li>dense continuous values</li>
+</ul></li>
+</ol>
+</section>
+<section id="sparse" class="slide level1">
+<h1>Sparse</h1>
+</section>
+<section id="dense" class="slide level1">
+<h1>Dense</h1>
+</section>
+<section id="third-question-what-does-your-unstructured-data-look-like" class="slide level1">
+<h1>Third Question: what does your unstructured data look like?</h1>
+<ol type="1">
+<li>How much of it you got?</li>
+<li>How does it link to your structured dataset?
+<ul>
+<li>classifying authors?</li>
+<li>classifying object of discussion?</li>
+<li>single &quot;documents&quot; per link vs hierarchical corpus?</li>
+</ul></li>
+<li>Got labels?
+<ul>
+<li>For all documents?</li>
+<li>For some authors for some documents?</li>
+</ul></li>
+<li>you do actually think there is some valuable information in there, right?</li>
+</ol>
+</section>
+<section id="last-question-model-evaluation-or-how-do-you-feel-about-p-values" class="slide level1">
+<h1>Last question: Model evaluation? or how do you feel about p-values?</h1>
+<ol type="1">
+<li>&quot;I need them. All of them.&quot;</li>
+<li>&quot;I don't need them.&quot;</li>
+<li>&quot;I hate them.&quot;</li>
+<li>&quot;All of the above.&quot;</li>
+</ol>
+</section>
+<section id="prediction-focused-methods" class="slide level1">
+<h1>Prediction-focused Methods</h1>
+<ul>
+<li>The Kitchen Sink Approach
+<ul>
+<li>pro: Objective Function? What Objective Function?</li>
+<li>con: Depending on your role, often it isn't enough to just predict well.</li>
+<li>con: People are suspicious of the black box.</li>
+</ul></li>
+</ul>
+</section>
+<section id="inference-focused-methods" class="slide level1">
+<h1>Inference-focused Methods</h1>
+<ul>
+<li>Manually generated derivative features
+<ul>
+<li>pro: easy to explain/interpret</li>
+<li>con: potentially the path to madness</li>
+</ul></li>
+<li>Full Generative Model (now with more DAG)
+<ul>
+<li>pro: you wrote a dissertation without the fuss of getting a PHd</li>
+<li>con: you probably don't work there anymore, as it is now fifteen years later</li>
+</ul></li>
+</ul>
+</section>
+<section id="i-like-a-nice-blend..." class="slide level1">
+<h1>I like a nice blend...</h1>
+<ol type="1">
+<li>Feature Learning
+<ul>
+<li>Some unsupervised or semisupervised work with the text data</li>
+</ul></li>
+<li>Using the results as features in my core mode - represented in a way that propagates the uncertainty.</li>
+</ol>
+</section>
+<section id="things-to-watch-out" class="slide level1">
+<h1>Things to watch out</h1>
+<ol type="1">
+<li>so what do these p-values even mean now?</li>
+<li></li>
+</ol>
+</section>
+<section id="other-stuff" class="slide level1">
+<h1>Other stuff</h1>
+</section>
+    </div>
+  </div>
+
+  <script src="reveal.js/lib/js/head.min.js"></script>
+  <script src="reveal.js/js/reveal.min.js"></script>
+
+  <script>
+
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+//          { src: 'reveal.js/plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; }, }
+//          { src: 'reveal.js/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+]});
+    </script>
+  </body>
+</html>
