@@ -1,3 +1,7 @@
+% Incorporating Unstructured Data Into Your Feature Set
+% Rob Mealey, Sr. Machine Learning Technologist @ NewBrand 
+% November 20, 2014
+
 ---
 
 1. Lets assume a classification/rank ordering task. All these techniques should work fine with a regression task.
