@@ -3,10 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
-  <meta name="author" content="Unstructured Data Into Your Feature Set" />
+  <meta name="author" 
+      content="Unstructured Data Into Your Feature Set" />
   <title>Get Out of My Dreams and Into My Model</title>
   <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-status-bar-style" 
+      content="black-translucent" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link rel="stylesheet" href="reveal.js/css/reveal.min.css"/>
     <style type="text/css">code{white-space: pre;}</style>
@@ -39,13 +41,19 @@
 
 <section>
     <section id="assumptions-1" class="slide level1">
-        <h2>Making it easy on myself...</h2>
+        <h2>Making it easy for myself...</h2>
     </section>
     <section id="assumptions-2" class="slide level2">
-        <h2>meaning I will definitely annoy the PhD's in the room...</h2>
+        <h2>meaning at minimum I will definitely annoy the PhD's in the room...</h2>
     </section>
     <section id="assumptions-3" class="slide level2">
-        <h2>false advertising...</h2>
+        <h2>just a <em>smidge</em> of false advertising...</h2>
+    </section>
+</section>
+
+<section>
+    <section id="some-questions" class="titleslide slide level1">
+        <h1>First, a Few Questions...</h1>
     </section>
 </section>
 
@@ -54,7 +62,7 @@
         <h1> What's your goal here? </h1>
     </section>
     <section id="reasons-2" class="slide level2">
-        <h2>More power! </h2>
+        <img src="img/fortuneteller.jpg">
     </section>
     <section id="reasons-3" class="level2">
         <table style="margin-left:auto; margin-right:auto; font-size: 40px; width:80%;">
@@ -87,32 +95,15 @@
     <section id="reasons-4" class="slide level2">
         <img src='img/dag.png' style="width:100%">
     </section>
-</section>
 
-<section>
-    <section id="some-questions" class="titleslide slide level1">
-        <h1>First, a Few Questions...</h1>
-    </section>
-</section>
-
-<section>
-    <section id="goal-1" class="titleslide slide level1">
+    <section id="reasons-5" class="slide level2">
         <h1>What does your boss care about?</h1>
-    </section>
-    <section id="goal-2" class="slide level2">
-        <h1>Pure Prediction?</h1>
-    </section>
-    <section id="goal-3" class="slide level2">
-        <h1>Inference / Analysis?</h1>
-    </section>
-    <section id="goal-4" class="slide level2">
-        <h1>Both?</h1>
     </section>
 </section>
 
 <section>
     <section id="what-does-your-structured-data-look-like" class="titleslide slide level1">
-        <h1>2: What does your structured data look like?</h1>
+        <h1>What do your structured data look like?</h1>
     </section>
     <section id="how-much-of-it-you-got" class="slide level2">
         <h1>How much of it you got?</h1>
@@ -124,7 +115,7 @@
 
 <section>
     <section id="what-does-your-corpus-look-like" class="titleslide slide level1">
-        <h1>3: What does your corpus look like?</h1>
+        <h1>What does your corpus look like?</h1>
     </section>
     <section id="whats-the-link" class="slide level2">
         <h1>What's the link?</h1>
@@ -134,6 +125,7 @@
     </section>
     <section id="got-labels" class="slide level2">
         <h1>Got labels?</h1>
+        <h1>how'd you get em?</h1>
     </section>
     <section id="there-is-some-there-there..." class="slide level2">
         <h1> There is some there there, right? </h1>
@@ -150,48 +142,6 @@
     <section id="precision-recall" class="slide level2">
         <img src="img/Recall-precision.svg.png">
     </section>
-    
-</section>
-
-<section>
-    <section id="promotion-targeting-1" class="titleslide slide level1">
-        Goal: rank-ordering potential targets for a promotion
-    </section>
-    <section id="promotion-targeting-2" class="slide level2">
-        Pure Prediction
-    </section>
-    <section id="promotion-targeting-3" class="slide level2">
-        Structured dataset:
-    </section>
-    <section id="promotion-targeting-4" class="slide level2">
-        Associated unstructured text dataset: targets' social media postings
-        Link: Hierarchical corpus: one author to many documents
-    </section>
-    <section id="promotion-targeting-5" class="slide level2">
-        Potential Uses for Unstructured Data:
-    </section>
-</section>
-
-<section>
-    <section id="location-comparison-1" class="titleslide slide level1">
-        Goal:  
-        Inference/Analysis
-    </section>
-    <section id="location-comparison-2" class="slide level2">
-        Structured dataset:
-        Associated unstructured text data:
-        Link:
-    </section>
-</section>
-
-<section>
-<section id="daily-deal-success" class="titleslide slide level1">
-    Goal: rank-ordering merchants for participation in a "daily deal"
-    Both Prediction and Inference
-    Structured dataset:
-    Associated unstructured text data:
-    Link:
-</section>
 </section>
 
 <section>
@@ -214,75 +164,201 @@
 
 <section>
     <section id="pure-prediction-1" class="titleslide slide level1">
-        <h1>Pure Prediction</h1>
+        <h1> Objective Function? What Objective Function? </h1>
     </section>
-    <section id="kitchen-sink-approach" class="slide level2">
-        <h1>Kitchen Sink Approach</h1>
-        <ul>
-        <li>pro: Objective Function? What Objective Function?</li>
-        <li>con: Depending on your role, often it isn't enough to just predict well.</li>
-        <li>con: People are suspicious of the black box.</li>
-        </ul>
+    <section id="pure-prediction-2" class="slide level2">
+        <img src='img/kitchen-sink.jpg' style='width:75%' >
     </section>
-    <section id="dimensionality-reduction" class="slide level2">
-        <h1>Reducing the Dimensions</h1>
+    <section id="pure-prediction-3" class="slide level2">
+        <img src='img/regularization.jpg' style='width:75%' >
     </section>
-    <section id="clustering" class="slide level2">
-        <h1>Clustering</h1>
+    <section id="pure-prediction-4" class="slide level2">
+        <img src='img/deep-learning.jpg' style='width:75%' >
+    </section>
+    <section id="pure-prediction-4" class="slide level2">
+        <img src='img/black-box.jpg' style='width:75%' >
     </section>
 </section>
 
 <section>
-    <section id="pure-analysis" class="titleslide slide level1">
-        <h1>Pure Analysis</h1>
+    <section id="heuristics-1" class="titleslide slide level1">
+        <h1> Heuristics </h1>
     </section>
-    <section id="manually-generated-derivative-features" class="slide level2">
-        <h1>Manually generated derivative features</h1>
-        <ul>
-            <li>"dirty" vs "clean"</li>
-            <li>potentially the path to madness...</li>
-            <li>"Wait, is that an quadruple negative in that sentence?"</li>
-        </ul>
+    <section id="heuristics-2" class="slide level2">
+        <img src='img/making-the-rules.jpg' style='width:75%' >
+    </section>
+    <section id="heuristics-3" class="slide level2">
+        <h2>"dirty" vs "clean"</h2>
+    </section>
+    <section id="heuristics-4" class="slide level2">
+        <h2>"OMFG, is that an quadruple negative?"</h2>
     </section>
 </section>
-<section>
-    <section id="pure-inference" class="titleslide slide level1">
-        <h1>Pure Inference</h1>
-    </section>
-    <section id="full-generative-model" class="slide level2">
-        <h1>Full Generative Model</h1>
-        <ul>
-            <li>pro: you did all the work of a dissertation without the fuss of getting a PHd</li>
-            <li>con: you probably don't work there anymore, as it is now fifteen years later</li>
-        </ul>
-    </section></section>
-<section>
-    <section id="i-like-a-nice-blend..." class="titleslide slide level1">
-        <h1>I like a nice blend...</h1>
-    </section>
-    <section id="feature-learning" class="slide level2">
 
+<section>
+    <section id="full-generative-model-1" class="titleslide slide level1">
+        <h1>Total. Probability.</h1>
     </section>
-    <section id="feature" class="slide level2">
-        <h1>Feature</h1>
-        <ul>
-        <li>Using the results as features in my core mode</li>
-        <li>represented in a way that propagates the uncertainty.</li>
-        </ul>
+    <section id="full-generative-model-2" class="slide level2">
+        <img src='img/everything.gif' style='width:100%;'>
+    </section>
+    <section id="full-generative-model-3" class="slide level2">
+        <h2> You should check if you've been fired. </h2> 
+    </section>
+    <section id="full-generative-model-4" class="slide level2">
+        <h2> Also, it is 2037 now. </h2> 
+    </section>
+    <section id="full-generative-model-4" class="slide level2">
+        <h2> PyMC, BUGS/JAGS, STAN </h2>
     </section>
 </section>
+
 <section>
-    <section id="things-to-watch-out" class="titleslide slide level1">
-        <h1>Things to watch out</h1>
+    <section id="middle-1" class="titleslide slide level1">
+        <h1> the middle roads... </h1>
     </section>
-    <section id="so-what-do-these-p-values-even-mean-now" class="slide level2">
-        <h1>so what do these p-values even mean now?</h1>
+    <section id="middle-2" class="slide level2">
+        <h1> sub-classifiers </h1>
+    </section>
+    <section id="middle-3" class="slide level2">
+        <h1> need good labels... </h1>
+        <h3> inter-annotator agreement? </h3>
+    </section>
+    <section id="middle-4" class="slide level2">
+        <h1> use the uncertainty... </h1>
+    </section>
+    <section id="middle-5" class="slide level2">
+        <h1> GIGO! </h1>
+        <h3> Also YOLO. </h3>
     </section>
 </section>
+
 <section>
-    <section id="other-stuff" class="titleslide slide level1">
-        <h1>Other stuff</h1>
+    <section id="feature-learning-1" class="titleslide slide level1">
+        <h1> semi- or unsupervised methods </h1>
     </section>
+    <section id="feature-learning-4" class="slide level2">
+        <h1> dimensionality reduction  </h1>
+    </section>
+    <section id="feature-learning-2" class="slide level2">
+        <h1> clustering </h1>
+    </section>
+    <section id="feature-learning-3" class="slide level2">
+        <h1> topic modeling </h1> 
+        <h2> probabilistic or otherwise </h2>
+    </section>
+    <section id="feature-learning-3" class="slide level2">
+        <h1> need lots of the data... </h1>
+    </section>
+</section>
+
+<section>
+    <section id="gotchas-1" class="titleslide slide level1">
+        <h1>Gotchas</h1>
+    </section>
+    <section id="gotchas-2" class="slide level2">
+        <h1> "endogeneity" </h1>
+        <h3> If you are an econometrician,</h3>
+        <h3> read this paper: </h3>
+        <a href='http://ftp.cs.ucla.edu/pub/stat_ser/r395.pdf'>
+            <p>Regression and Causation:</p>
+            <p>A Critical Examination of Six Econometrics Textbooks by Bryant Chen and Judea Pearl</p></a>
+    </section>
+    <section id="gotchas-2" class="slide level2">
+        <h1> mind your betas... </h1>
+    </section>
+    <section id="gotchas-3" class="slide level2">
+        <h1>you thought they were hard to interpret before?</h1>
+    </section>
+</section>
+
+
+<section>
+    <section id="some examples" class="titleslide slide level1">
+        <img src='img/real-world.jpg' style='width:80%;'>
+    </section>
+</section>
+
+<section>
+    <section id="promotion-targeting-1" class="titleslide slide level1">
+        <h1>Task:</h1> 
+        <h2>predict receptiveness of potential targets for a promotional campaign.</h2>
+    </section>
+    <section id="promotion-targeting-3" class="slide level2">
+        <img src='img/what-to-do.jpg'>
+    </section>
+</section>
+
+<section>
+    <section id="location-comparison-1" class="titleslide slide level1">
+        <h1>Task:</h1>
+        <h2>predict operational metrics at different locations of a service business</h2>
+    </section>
+    <section id="location-comparison-2" class="slide level2">
+        <img src='img/explain.png'>
+    </section>
+</section>
+
+<section>
+    <section id="daily-deal-success-1" class="titleslide slide level1">
+        <h1>Task:</h1>
+        <h2>predict merchant upside for participating in a "daily deal" promotion</h2>
+    </section>
+    <section id="daily-deal-success-2" class="slide level2">
+        <img src='img/deal.jpg' style='width:80%'>
+    </section>
+</section>
+
+
+<section>
+    <section id="tools-matter-1" class="titleslide slide level1">
+        <h1> tools matter... </h1>
+    </section>
+    <section id="tools-matter-2" class="slide level2">
+        <h1> because you're probably going to need some help... </h1>
+    </section>
+    <section id="tools-matter--3" class="slide level2">
+        <h1> How many SASonistas we got in the house? </h1>
+    </section>
+    <section id="tools-matter-4" class="slide level2">
+        <h1> What about Stataniacs? </h1>
+    </section>
+</section>
+
+<section>
+    <section id="python-1" class="titleslide slide level1">
+         <img src="img/python.jpg">
+    </section>
+    <section id="python-2" class="slide level2">
+         <img src="img/nltk.jpg" style='width:40%;'>
+    </section>
+    <section id="python-3" class="slide level2">
+        <a href="http://scikit-learn.org"><img src="img/sklearn.png"></a>
+         <h2><a href='http://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.CountVectorizer.html'>
+                 CountVectorizer</a></h2>
+         <h2><a href='http://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.HashingVectorizer.html'>
+                 HashingVectorizer</a></h2>
+    </section>
+    <section id="python-3" class="slide level2">
+         <img src="img/gensim.png">
+    </section>
+</section>
+
+<section>
+    <section id="rstats-1" class="titleslide slide level1">
+         <img src="img/rlogo.jpg">
+    </section>
+    <section id="rstats-2" class="slide level2">
+        <h2> "tm" package </h2>
+        <a href="http://cran.r-project.org/web/views/NaturalLanguageProcessing.html" >
+            CRAN Task View: Natural Language Processing</a>
+    </section>
+    <section id="rstats-3" class="slide level2">
+        <a href='http://had.co.nz/'><img src='img/hadley.jpg'></a>
+        <h3> "I'm so much more than just ggplot2." </h3>
+        <h4> (Disclaimer: No way he has ever said that.) </h4>
+    </section>
+    
 </section>
 
 </div>

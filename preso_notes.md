@@ -57,6 +57,12 @@
     - unstructured data: social reviews and survey responses for location
 
 # techniques
+1. The Kitchen Sink approach
+    - just throw it all together and regularize the hell out of it
+    - or use some deep learning methods
+    - pro: "simple"
+    - pro: usually performs reasonably well, often very well
+    - con: no simple - or even complicated - answer for "why"
 1. Heuristics
     - pro: simple to explain/interpret
     - con: difficult to capture subtlety/nuance in any real way 
@@ -64,17 +70,26 @@
     - pro: full probability model
     - con: difficult to do well, time consuming
     - con: probably not worth the effort
-3. Sub-classifiers, with predictions used as features in core model
-4. unsupervised and semi-supervised "summarization", with results used
-   as features in core model
-    1. clustering 
-    2. abstraction 
-    3. dimensionality reduction
+3. Meeting halfway...
+    1. Sub-classifiers, with predictions used as features in core model
+        1. need sub-labels
+        2. propagate the uncertainty
+    2. unsupervised and semi-supervised "summarization", with results used
+       as features in core model
+        1. clustering 
+        2. abstraction 
+        3. dimensionality reduction
+        4. need lots of data
 
 # preprocessing
 1. bag-of-ngrams
 2. chunking
-3. stopword filtering
+3. bag-of-chunks
+4. stopword filtering
+
+# things to watch out for
+1. interpretation of coefs
+2. significance testing
 
 # useful tools
 1. NLTK (comprehensive python NLP package)
